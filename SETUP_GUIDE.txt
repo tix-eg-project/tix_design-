@@ -1,0 +1,126 @@
+===============================================
+دليل دمج التصميم على موقعك Next.js الموجود
+===============================================
+
+الملفات المراد نسخها:
+=====================
+
+1. ملفات الصفحات (Pages):
+   من /app إلى موقعك/app:
+   - page.tsx (الصفحة الرئيسية)
+   - product/[id]/page.tsx
+   - cart/page.tsx
+   - checkout/page.tsx
+   - login/page.tsx
+   - register/page.tsx
+   - account/page.tsx
+   - account/orders/page.tsx
+   - account/returns/page.tsx
+   - account/reviews/page.tsx
+   - category/[slug]/page.tsx
+   - search/page.tsx
+   - order/success/page.tsx
+   - about/page.tsx
+   - contact/page.tsx
+
+2. مكونات (Components):
+   من /components إلى موقعك/components:
+   - header.tsx
+   - footer.tsx
+   - hero.tsx
+   - category-nav.tsx
+   - category-showcase.tsx
+   - product-carousel.tsx
+   - product-grid.tsx
+   - features.tsx
+
+3. مكتبات مساعدة (Utilities):
+   - /lib/auth.ts (نظام المصادقة التجريبي)
+   - /lib/utils.ts (دوال مساعدة)
+
+4. الأنماط:
+   - app/globals.css (الأنماط العامة - دمج مع globals.css الموجود)
+
+5. الصور:
+   - جميع الملفات من /public إلى public/ في موقعك
+
+خطوات التثبيت:
+===============
+
+الخطوة 1: نسخ المجلدات
+- انسخ جميع الملفات من /app
+- انسخ جميع المكونات من /components
+- انسخ /lib/auth.ts و /lib/utils.ts
+- انسخ جميع الصور من /public
+
+الخطوة 2: تحديث package.json
+تأكد من وجود:
+{
+  "dependencies": {
+    "next": "^15.x",
+    "react": "^19.x",
+    "react-dom": "^19.x",
+    "lucide-react": "latest"
+  }
+}
+
+الخطوة 3: تشغيل الأوامر
+npm install
+npm run dev
+
+الخطوة 4: التحقق من الإعدادات
+- تأكد من وجود layout.tsx في /app
+- تأكد من وجود next.config.mjs
+- تأكد من وجود tailwind.config.js
+
+المنتجات والبيانات التجريبية:
+===============================
+
+حساب تجريبي للاختبار:
+- البريد: demo@tix-eg.com
+- كلمة المرور: demo1234
+
+المنتجات: 100 منتج مع صور كاملة
+الطلبات: 3 طلبات تجريبية في الحساب
+الإرجاع: 1 طلب إرجاع تجريبي
+التقييمات: منتجات قابلة للتقييم
+
+الأيقونات المستخدمة:
+====================
+جميع الأيقونات من lucide-react:
+- Heart, Star, Truck, Clock, Shield, Package, CreditCard
+- User, LogOut, Search, ShoppingCart, Eye, Download
+- ChevronDown, ChevronLeft, AlertCircle, Check, MessageCircle, HelpCircle
+
+الألوان المستخدمة:
+==================
+- Primary: #FF8C00 (برتقالي)
+- Background: #FFFFFF (أبيض)
+- Foreground: #000000 (أسود)
+- Secondary: #F5F5F5 (رمادي فاتح)
+
+الخصائص الرئيسية:
+=================
+✓ تصميم RTL كامل (دعم العربية)
+✓ متجاوب على جميع الأجهزة
+✓ نظام مصادقة تجريبي
+✓ سلة تسوق كاملة
+✓ نظام الحساب مع الطلبات والإرجاع والتقييمات
+✓ معرض صور كامل مع Zoom
+✓ نظام أسئلة وأجوبة
+✓ Trust Badges موحد
+
+ملاحظات مهمة:
+==============
+1. نظام المصادقة حالياً يستخدم localStorage - استبدله بنظام حقيقي عند الإطلاق
+2. البيانات حالياً mock data - ربطها بـ API الحقيقي
+3. الصور تحتاج تحسينات الـ Next.js Image component
+4. استخدم Supabase أو Neon لـ database الحقيقي
+
+المساعدة الإضافية:
+==================
+إذا واجهت مشاكل:
+1. تأكد من أن Node.js محدثة (v18+)
+2. احذف node_modules و package-lock.json وأعد التثبيت
+3. تأكد من أن الملفات بصيغة UTF-8
+4. تحقق من أن جميع الـ imports صحيحة
