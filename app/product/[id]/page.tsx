@@ -9,18 +9,6 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card } from '@/components/ui/card'
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  return {
-    title: 'سماعات لاسلكية بلوتوث احترافية - TIX',
-    description: 'سماعات لاسلكية عالية الجودة مع تقنية إلغاء الضوضاء وسعر 299 ج.م',
-    openGraph: {
-      title: 'سماعات لاسلكية بلوتوث احترافية - TIX',
-      description: 'منتج عالي الجودة بسعر منافس',
-      type: 'product',
-      url: `https://tix-eg.com/product/${params.id}`,
-    },
-  }
-}
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const [quantity, setQuantity] = useState(1)
