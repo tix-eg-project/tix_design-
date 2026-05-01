@@ -1,7 +1,6 @@
 'use client'
 
 import Link from "next/link"
-import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Search, ShoppingCart, Heart, User, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -34,17 +33,9 @@ export function Header() {
     <header className="bg-white text-black border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4 gap-4">
-          {/* Logo on the left - Circular */}
+          {/* Logo on the left */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="rounded-full overflow-hidden bg-white border-2 border-gray-300">
-              <Image 
-                src="/tix-logo.png" 
-                alt="TIX Logo" 
-                width={80} 
-                height={80}
-                className="h-16 w-16 object-cover"
-              />
-            </div>
+            <span className="text-2xl font-bold text-black">TIX</span>
           </Link>
 
           {/* Search Bar in the middle */}
