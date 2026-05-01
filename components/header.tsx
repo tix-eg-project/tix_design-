@@ -34,15 +34,17 @@ export function Header() {
     <header className="bg-white text-black border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4 gap-4">
-          {/* Logo on the left */}
+          {/* Logo on the left - Circular */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <Image 
-              src="/tix-logo.png" 
-              alt="TIX Logo" 
-              width={80} 
-              height={80}
-              className="h-14 w-auto"
-            />
+            <div className="rounded-full overflow-hidden bg-white border-2 border-gray-300">
+              <Image 
+                src="/tix-logo.png" 
+                alt="TIX Logo" 
+                width={80} 
+                height={80}
+                className="h-16 w-16 object-cover"
+              />
+            </div>
           </Link>
 
           {/* Search Bar in the middle */}
@@ -51,9 +53,9 @@ export function Header() {
               <Input
                 type="search"
                 placeholder="Search..."
-                className="w-full bg-black border-black text-white placeholder:text-gray-400 pr-10"
+                className="w-full bg-white border border-gray-400 text-black placeholder:text-gray-500 pr-10"
               />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-600" />
             </div>
           </div>
 
