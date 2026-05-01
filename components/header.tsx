@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Search, ShoppingCart, Heart, User, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -101,9 +102,13 @@ export function Header() {
           </div>
 
           <Link href="/" className="flex items-center gap-2">
-            <div className="bg-white rounded-full p-2">
-              <div className="text-black font-bold text-xl">TIX</div>
-            </div>
+            <Image 
+              src="/tix-logo.png" 
+              alt="TIX Logo" 
+              width={80} 
+              height={80}
+              className="h-12 w-auto"
+            />
           </Link>
         </div>
       </div>
