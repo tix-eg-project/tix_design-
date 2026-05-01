@@ -33,8 +33,32 @@ export function Header() {
   return (
     <header className="bg-black text-white">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
-          <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between py-4 gap-4">
+          {/* Logo on the left */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <Image 
+              src="/tix-logo.png" 
+              alt="TIX Logo" 
+              width={80} 
+              height={80}
+              className="h-14 w-auto"
+            />
+          </Link>
+
+          {/* Search Bar in the middle */}
+          <div className="flex-1 max-w-2xl">
+            <div className="relative">
+              <Input
+                type="search"
+                placeholder="Search..."
+                className="w-full bg-white border-gray-300 text-black placeholder:text-gray-500 pr-10"
+              />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
+            </div>
+          </div>
+
+          {/* Right side icons */}
+          <div className="flex items-center gap-4 flex-shrink-0">
             {user ? (
               <div className="relative">
                 <button
@@ -89,27 +113,6 @@ export function Header() {
               </Button>
             </Link>
           </div>
-
-          <div className="flex-1 max-w-2xl mx-8">
-            <div className="relative">
-              <Input
-                type="search"
-                placeholder="Search..."
-                className="w-full bg-white border-gray-300 text-black placeholder:text-gray-500 pr-10"
-              />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
-            </div>
-          </div>
-
-          <Link href="/" className="flex items-center gap-2">
-            <Image 
-              src="/tix-logo.png" 
-              alt="TIX Logo" 
-              width={80} 
-              height={80}
-              className="h-12 w-auto"
-            />
-          </Link>
         </div>
       </div>
     </header>
