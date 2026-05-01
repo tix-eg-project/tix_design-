@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Montserrat, Tajawal } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const geistSans = Geist({ subsets: ['latin'] })
-const geistMono = Geist_Mono({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
+const tajawal = Tajawal({ subsets: ['arabic'], weight: ['400', '500', '700'], variable: '--font-tajwal' })
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -50,9 +50,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" suppressHydrationWarning className={`${tajawal.variable} ${montserrat.variable}`}>
       <head />
-      <body className={`${geistSans.className} ${geistMono.className} antialiased`}>
+      <body className="antialiased">
         {children}
         <Analytics />
       </body>
