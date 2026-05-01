@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next'
-import { Montserrat, Tajwal } from 'next/font/google'
+import { Montserrat, Tajawal } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
-const tajwal = Tajwal({ subsets: ['arabic'], weight: ['400', '500', '700'], variable: '--font-tajwal' })
+const tajawal = Tajawal({ subsets: ['arabic'], weight: ['400', '500', '700'], variable: '--font-tajwal' })
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning className={`${tajwal.variable} ${montserrat.variable}`}>
+    <html lang="ar" dir="rtl" suppressHydrationWarning className={`${tajawal.variable} ${montserrat.variable}`}>
       <head />
       <body className="antialiased">
         {children}
