@@ -103,12 +103,12 @@ export default function FlashDeals() {
   ]
 
   return (
-    <section className="bg-black py-8">
+    <section className="bg-red-600 py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="bg-red-600 rounded-full p-2">
+            <div className="bg-red-700 rounded-full p-2">
               <Zap className="h-5 w-5 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white">عروض الفلاش</h2>
@@ -116,19 +116,19 @@ export default function FlashDeals() {
           
           {/* Time Countdown */}
           <div className="text-white text-right">
-            <p className="text-xs text-gray-400 mb-1">ينتهي خلال</p>
+            <p className="text-xs text-red-200 mb-1">ينتهي خلال</p>
             <div className="flex gap-2 justify-end font-mono text-xl font-bold">
-              <span className="bg-gray-800 px-2 py-1 rounded">{String(timeLeft.seconds).padStart(2, '0')}</span>
-              <span className="text-gray-500">:</span>
-              <span className="bg-gray-800 px-2 py-1 rounded">{String(timeLeft.minutes).padStart(2, '0')}</span>
-              <span className="text-gray-500">:</span>
-              <span className="bg-gray-800 px-2 py-1 rounded">{String(timeLeft.hours).padStart(2, '0')}</span>
+              <span className="bg-red-700 px-2 py-1 rounded">{String(timeLeft.seconds).padStart(2, '0')}</span>
+              <span className="text-red-200">:</span>
+              <span className="bg-red-700 px-2 py-1 rounded">{String(timeLeft.minutes).padStart(2, '0')}</span>
+              <span className="text-red-200">:</span>
+              <span className="bg-red-700 px-2 py-1 rounded">{String(timeLeft.hours).padStart(2, '0')}</span>
             </div>
           </div>
         </div>
 
         {/* Subtitle */}
-        <p className="text-center text-red-500 text-sm font-semibold mb-6">خصومات تصل إلى 70% لفترة محدودة</p>
+        <p className="text-center text-red-100 text-sm font-semibold mb-6">خصومات تصل إلى 70% لفترة محدودة</p>
 
         {/* Products Carousel */}
         <div className="relative">
