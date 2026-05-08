@@ -103,12 +103,12 @@ export default function FlashDeals() {
   ]
 
   return (
-    <section className="bg-red-600 py-8">
+    <section style={{ backgroundColor: '#E7010B' }} className="py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="bg-red-700 rounded-full p-2">
+            <div style={{ backgroundColor: '#c70008' }} className="rounded-full p-2">
               <Zap className="h-5 w-5 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white">عروض الفلاش</h2>
@@ -116,19 +116,19 @@ export default function FlashDeals() {
           
           {/* Time Countdown */}
           <div className="text-white text-right">
-            <p className="text-xs text-red-200 mb-1">ينتهي خلال</p>
+            <p className="text-xs mb-1" style={{ color: '#ffcccc' }}>ينتهي خلال</p>
             <div className="flex gap-2 justify-end font-mono text-xl font-bold">
-              <span className="bg-red-700 px-2 py-1 rounded">{String(timeLeft.seconds).padStart(2, '0')}</span>
-              <span className="text-red-200">:</span>
-              <span className="bg-red-700 px-2 py-1 rounded">{String(timeLeft.minutes).padStart(2, '0')}</span>
-              <span className="text-red-200">:</span>
-              <span className="bg-red-700 px-2 py-1 rounded">{String(timeLeft.hours).padStart(2, '0')}</span>
+              <span style={{ backgroundColor: '#c70008' }} className="px-2 py-1 rounded">{String(timeLeft.seconds).padStart(2, '0')}</span>
+              <span style={{ color: '#ffcccc' }}>:</span>
+              <span style={{ backgroundColor: '#c70008' }} className="px-2 py-1 rounded">{String(timeLeft.minutes).padStart(2, '0')}</span>
+              <span style={{ color: '#ffcccc' }}>:</span>
+              <span style={{ backgroundColor: '#c70008' }} className="px-2 py-1 rounded">{String(timeLeft.hours).padStart(2, '0')}</span>
             </div>
           </div>
         </div>
 
         {/* Subtitle */}
-        <p className="text-center text-red-100 text-sm font-semibold mb-6">خصومات تصل إلى 70% لفترة محدودة</p>
+        <p className="text-center text-sm font-semibold mb-6" style={{ color: '#ffe6e6' }}>خصومات تصل إلى 70% لفترة محدودة</p>
 
         {/* Products Carousel */}
         <div className="relative">
