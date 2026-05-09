@@ -33,10 +33,28 @@ export function Header() {
     <header className="bg-white text-black border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4 gap-4">
-          {/* Logo on the left */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <span className="text-2xl font-bold text-black">TIX</span>
-          </Link>
+          {/* Logo and Navigation Links */}
+          <div className="flex items-center gap-8 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2">
+              <span className="text-2xl font-bold text-black">TIX</span>
+            </Link>
+            
+            {/* Nav Links */}
+            <nav className="hidden lg:flex items-center gap-8">
+              <Link href="/" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+                الرئيسية
+              </Link>
+              <Link href="/products" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+                المنتجات
+              </Link>
+              <Link href="/offers" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+                العروض
+              </Link>
+              <Link href="/points" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+                النقاط
+              </Link>
+            </nav>
+          </div>
 
           {/* Search Bar in the middle */}
           <div className="flex-1 max-w-2xl">
