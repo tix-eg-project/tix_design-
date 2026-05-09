@@ -52,28 +52,26 @@ export default function AllOffers() {
   ]
 
   return (
-    <section className="bg-white py-12 border-b border-gray-100 w-full">
+    <section className="bg-white py-12 border-b border-gray-100">
       {/* Title */}
       <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">كل العروض</h2>
       
       {/* Offers Grid - Full Width */}
-      <div className="w-full px-4 md:px-8 lg:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
-          {offers.map((offer) => (
-            <div
-              key={offer.id}
-              className="flex flex-col items-center text-center p-3 rounded-lg hover:shadow-md transition-shadow duration-300 cursor-pointer"
-            >
-              {/* Icon Circle */}
-              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-3 hover:bg-gray-200 transition-colors">
-                <div className="text-3xl">{offer.icon}</div>
-              </div>
-              
-              {/* Name */}
-              <h3 className="text-gray-700 font-semibold text-sm">{offer.name}</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4 md:px-6 lg:px-8">
+        {offers.map((offer) => (
+          <div
+            key={offer.id}
+            className="flex flex-col items-center text-center p-3 rounded-lg hover:shadow-md transition-shadow duration-300 cursor-pointer"
+          >
+            {/* Icon Circle */}
+            <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-3 hover:bg-gray-200 transition-colors">
+              <div className="text-3xl">{offer.icon}</div>
             </div>
-          ))}
-        </div>
+            
+            {/* Name */}
+            <h3 className="text-gray-700 font-semibold text-sm">{offer.name}</h3>
+          </div>
+        ))}
       </div>
     </section>
   )
