@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-xl mb-4">TIX</h3>
             <p className="text-sm text-gray-400 mb-4">
-              منصة متخصصة في بيع الأدوات والمعدات عبر الإنترنت مع توصيل سريع وآمن
+              نؤمن بأن كل عميل من حقه الاستمتاع في عميلة شراء شفافة ومصداقية وجودة تتناسب معه
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
               <Phone className="h-4 w-4" />
