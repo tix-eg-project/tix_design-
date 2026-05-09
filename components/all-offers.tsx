@@ -52,12 +52,12 @@ export default function AllOffers() {
   ]
 
   return (
-    <section className="bg-white py-12 border-b border-gray-100">
-      <div className="container mx-auto px-4">
-        {/* Title */}
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">كل العروض</h2>
-        
-        {/* Offers Grid */}
+    <section className="bg-white py-12 border-b border-gray-100 w-full">
+      {/* Title */}
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">كل العروض</h2>
+      
+      {/* Offers Grid - Full Width */}
+      <div className="w-full px-4 md:px-8 lg:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
           {offers.map((offer) => (
             <div
