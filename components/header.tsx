@@ -40,17 +40,17 @@ export function Header() {
             </Link>
             
             {/* Nav Links */}
-            <nav className="hidden lg:flex items-center gap-8">
-              <Link href="/" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+            <nav className="flex items-center gap-6 md:gap-8">
+              <Link href="/" className="text-xs md:text-sm font-semibold text-black hover:text-gray-600 transition-colors">
                 الرئيسية
               </Link>
-              <Link href="/products" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+              <Link href="/products" className="text-xs md:text-sm font-semibold text-black hover:text-gray-600 transition-colors">
                 المنتجات
               </Link>
-              <Link href="/offers" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+              <Link href="/offers" className="text-xs md:text-sm font-semibold text-black hover:text-gray-600 transition-colors">
                 العروض
               </Link>
-              <Link href="/points" className="text-sm font-semibold text-black hover:text-gray-600 transition-colors">
+              <Link href="/points" className="text-xs md:text-sm font-semibold text-black hover:text-gray-600 transition-colors">
                 النقاط
               </Link>
             </nav>
