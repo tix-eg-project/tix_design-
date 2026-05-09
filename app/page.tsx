@@ -1912,8 +1912,8 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white" dir="rtl">
       <Header />
-      <Hero />
       <CategoryNav />
+      <Hero />
       <FlashDeals />
       <AllOffers />
       <ProductCarousel title="منتجات جديدة" products={productsToDisplay} />
