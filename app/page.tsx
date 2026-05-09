@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import Hero from '@/components/hero'
 import CategoryNav from '@/components/category-nav'
 import FlashDeals from '@/components/flash-deals'
+import AllOffers from '@/components/all-offers'
 import ProductCarousel from '@/components/product-carousel'
 import Footer from '@/components/footer'
 
@@ -1914,6 +1915,7 @@ export default async function Home() {
       <Hero />
       <CategoryNav />
       <FlashDeals />
+      <AllOffers />
       <ProductCarousel title="منتجات جديدة" products={productsToDisplay} />
       <Footer />
     </div>
